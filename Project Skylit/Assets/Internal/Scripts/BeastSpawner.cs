@@ -12,9 +12,15 @@ public class BeastSpawner : MonoBehaviour
     [SerializeField]
     private GameObject beast;
 
+    //Spawning the beasts at random spawn locations
     [SerializeField]
     private Transform[] beastSpawnLocations;
     private int beastSpawnLocationCount;
+
+    //Telling the beasts which barricade to go to once spawned.
+    [SerializeField]
+    private Transform[] barricadeLocations;
+    private int barricadeLocationsCount;
 
     #endregion //Fields
 
@@ -24,6 +30,7 @@ public class BeastSpawner : MonoBehaviour
     {
         ResetTimers();
         beastSpawnLocationCount = beastSpawnLocations.Length;
+        barricadeLocationsCount = barricadeLocations.Length;
 
     } //Start
 
@@ -57,8 +64,12 @@ public class BeastSpawner : MonoBehaviour
     {
         int _beastSpawnLocationIndex = Random.Range(0, beastSpawnLocationCount);
 
-        Instantiate(beast, beastSpawnLocations[_beastSpawnLocationIndex].transform.position,
+        var _beast = Instantiate(beast, beastSpawnLocations[_beastSpawnLocationIndex].transform.position,
                            beastSpawnLocations[_beastSpawnLocationIndex].transform.rotation);
+
+        int _barricadeLocationsIndex  = Random.Range(0, barricadeLocationsCount);
+
+        _beast.GetComponent<BeastNavigator>().SetDestination(barricadeLocations[_barricadeLocationsIndex]);
 
     } //SpawnBeast
 
