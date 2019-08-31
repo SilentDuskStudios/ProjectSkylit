@@ -22,7 +22,7 @@ public class BeastSpawner : MonoBehaviour
     private Transform[] barricadeLocations;
     private int barricadeLocationsCount;
 
-    #endregion //Fields
+    #endregion
 
     #region " - - - - - - Methods - - - - - - "
 
@@ -32,7 +32,7 @@ public class BeastSpawner : MonoBehaviour
         beastSpawnLocationCount = beastSpawnLocations.Length;
         barricadeLocationsCount = barricadeLocations.Length;
 
-    } //Start
+    }
 
     private void Update()
     {
@@ -44,20 +44,20 @@ public class BeastSpawner : MonoBehaviour
             ResetTimers();
         }
 
-    } //Update
+    }
 
     private void ResetTimers()
     {
         currentTimer = 0f;
         spawnTime = SetSpawnTime();
 
-    } //ResetTimers
+    }
 
     private float SetSpawnTime()
     {
         return Random.Range(1f, 3f);
 
-    } //SetSpawnTime
+    }
 
     //TODO: Add a parameter of type Enum that spawns specific beasts.
     private void SpawnBeast()
@@ -67,12 +67,12 @@ public class BeastSpawner : MonoBehaviour
         var _beast = Instantiate(beast, beastSpawnLocations[_beastSpawnLocationIndex].transform.position,
                            beastSpawnLocations[_beastSpawnLocationIndex].transform.rotation);
 
-        int _barricadeLocationsIndex  = Random.Range(0, barricadeLocationsCount);
+        int _barricadeLocationsIndex = Random.Range(0, barricadeLocationsCount);
 
         _beast.GetComponent<BeastNavigator>().SetDestination(barricadeLocations[_barricadeLocationsIndex]);
 
-    } //SpawnBeast
+    }
 
-    #endregion //Methods
+    #endregion
 
-} //BeastSpawner
+}

@@ -10,17 +10,19 @@ public class BeastNavigator : MonoBehaviour
     [SerializeField]
     private NavMeshAgent navMeshAgent;
 
-    #endregion //Fields
+    #endregion
 
     #region " - - - - - - Methods - - - - - - "
 
-    public void SetDestination(Transform _destination)
+    public void SetDestination(Transform destination)
     {
-        //Becaues I cannot set the true position of the barricades, I must get the position of its box collider.
-        navMeshAgent.destination = _destination.gameObject.GetComponent<Collider>().bounds.center;
+        //TODO: Figure out a workaround. It seems like the issue is rooted in Maya.
 
-    } //SetDesintation
+        //TODO: Remove comments below as I can now get the correct position.
+        //I cannot set the true position of the barricades, I must instead get the position of its box collider.
+        //navMeshAgent.destination = destination.gameObject.GetComponent<Collider>().bounds.center;
+        navMeshAgent.destination = destination.position;
 
-    #endregion //Methods
-
-} //BeastNavigator
+    }
+    #endregion
+} 
