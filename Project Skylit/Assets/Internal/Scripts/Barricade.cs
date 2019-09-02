@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class Barricade : MonoBehaviour
 {
+    #region " - - - - - - Fields - - - - - - "
+
     private int maxHealth;
     private int currentHealth;
 
@@ -17,6 +19,10 @@ public class Barricade : MonoBehaviour
     [SerializeField]
     private NavMeshObstacle navMeshObstacle;
 
+    #endregion
+
+    #region " - - - - - - Methods - - - - - - "
+
     private void Start()
     {
         maxHealth = 100;
@@ -25,19 +31,10 @@ public class Barricade : MonoBehaviour
         currentBarricadeStatus = barricadeStatuses[currentBarricadeStatusIndex];
         barricadeStatuses[currentBarricadeStatusIndex].gameObject.SetActive(true);
     }
-
-    //TODO: Remove as this is for prototyping purposes.
-    private void Update()
-    {
-        if(Input.GetButtonDown("Jump"))
-            TakeDamage(5);
-
-        if (Input.GetButtonDown("Fire1"))
-            Repair(5);
-    }
-
+ 
     public void TakeDamage(int damage)
     {
+        //TODO: Add armour so that damage is multiplied by the armour to provide the true damage to inflict.
         currentHealth -= damage;
 
         if (currentHealth < 0)
@@ -94,7 +91,7 @@ public class Barricade : MonoBehaviour
         }
     }
 
-    //Enable or disable the nav mesh obstacle component depending on whether the barricade is still present.
+    //Setting the state of NavMeshObstacle component depending on whether the barricade is completely destroyed.
     private void SetNavMeshObstacle()
     {
         if (currentBarricadeStatusIndex == 0)
@@ -102,4 +99,19 @@ public class Barricade : MonoBehaviour
         else
             navMeshObstacle.enabled = true;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //This could be dangerous because the beast could be chasing the survivor but is still in the barricade 
+        //box collider even after it is destroyed.
+        if(other.gameObject.tag == "Beast")
+        {
+            Beast beast = other.gameObject.GetComponent<Beast>();
+            Transform target = beast.gameObject.GetComponent<BeastNavigator>().target;
+
+            beast.canAttack = true;
+        }
+    }
+
+    #endregion 
 }
