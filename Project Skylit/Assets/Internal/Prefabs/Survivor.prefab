@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4.503, z: 1}
   m_Children: []
   m_Father: {fileID: 8568771387992330507}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4853032172938867020
 MeshFilter:
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6829643300065875714}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 8567440040266598121}
   - component: {fileID: 8567440040266598122}
   m_Layer: 8
-  m_Name: FPS
+  m_Name: SurvivorController
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,7 +189,7 @@ Transform:
   m_Children:
   - {fileID: 6829643298171916788}
   m_Father: {fileID: 8568771387992330507}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &8551220406986733191
 Camera:
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 8575324765462129979}
   - component: {fileID: 8606547846355068135}
   m_Layer: 0
-  m_Name: Survivor 1
+  m_Name: Survivor
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -482,8 +482,8 @@ Transform:
   m_LocalPosition: {x: 23, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8568825501793563615}
   - {fileID: 1826858310493445283}
+  - {fileID: 8568825501793563615}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

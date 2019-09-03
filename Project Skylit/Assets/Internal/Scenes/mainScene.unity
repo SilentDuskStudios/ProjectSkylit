@@ -613,6 +613,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8606547846355068135, guid: b5117914fa713504a8f4089a65138064,
+        type: 3}
+      propertyPath: sprintSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606547846355068135, guid: b5117914fa713504a8f4089a65138064,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566364426000140389, guid: b5117914fa713504a8f4089a65138064,
+        type: 3}
+      propertyPath: m_Name
+      value: SurvivorController
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5117914fa713504a8f4089a65138064, type: 3}
 --- !u!4 &887638020 stripped

@@ -22,6 +22,14 @@ public class WeaponController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
             weapon.Fire();
+
+        //TODO: Add all interactions in here.
+        
+        //TODO: Add the following inputs...
+        //      Reload, NextWeapon, PreviousWeapon, Melee (hit with weapon(weapon's melee damage will be sent)).
+
+
+
     }
 
     #endregion //Methods
