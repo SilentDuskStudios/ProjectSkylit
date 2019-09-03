@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
@@ -36,6 +34,11 @@ public class Weapon : MonoBehaviour
         else {
             //Inform survivor that he has no ammo to shoot.
         }
+    }
+
+    public void CycleNextWeapon() {
+
+
     }
 
     private void Shoot() {

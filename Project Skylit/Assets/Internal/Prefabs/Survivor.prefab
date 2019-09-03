@@ -131,6 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829643300065875714}
+  - component: {fileID: 571121634852331486}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -153,6 +154,18 @@ Transform:
   m_Father: {fileID: 6829643298171916788}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &571121634852331486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829643300065875715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd902a62486fde7448e9fc79a03c5ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8566364426000140389
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,11 +777,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6829643300065875714}
     m_Modifications:
-    - target: {fileID: 8892308384359456092, guid: 2de4aecf997cc6046941016cc806705d,
-        type: 3}
-      propertyPath: m_Name
-      value: Pistol
-      objectReference: {fileID: 0}
     - target: {fileID: 8892308384359809404, guid: 2de4aecf997cc6046941016cc806705d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -833,6 +841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: range
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892308384359456092, guid: 2de4aecf997cc6046941016cc806705d,
+        type: 3}
+      propertyPath: m_Name
+      value: Pistol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de4aecf997cc6046941016cc806705d, type: 3}
