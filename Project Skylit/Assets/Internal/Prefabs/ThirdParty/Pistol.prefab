@@ -201,12 +201,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c13bbd09eefdc4988d169366d5b1fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nozzle: {fileID: 8847070859187260182}
-  range: 10
+  damage: 5
   maxCurrentClip: 9
-  maxReserveClip: 27
-  currentClip: 3
-  currentReserveClip: 9
+  maxReserveClip: 45
+  currentClip: 0
+  currentReserveClip: 0
+  range: 40
+  nozzle: {fileID: 8847070859187260182}
+  survivorView: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 311
 --- !u!65 &896809338319725673
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,18 +1,33 @@
 ﻿using UnityEngine;
+using UnityEngine.Experimental.Rendering.HDPipeline;
 
 public class Weapon : MonoBehaviour
 {
     #region " - - - - - - Fields - - - - - - "
 
     [SerializeField]
-    private Transform nozzle;
+    private int damage;
+
+    [SerializeField]
+    private int maxCurrentClip, maxReserveClip, currentClip, currentReserveClip;
 
     [SerializeField]
     private float range;
 
     [SerializeField]
-    private int maxCurrentClip, maxReserveClip, currentClip, currentReserveClip;
+    private Transform nozzle;
 
+    //TODO: I want to rename this field.
+    Ray rayBulletStart;
+
+    [SerializeField]
+    private Camera survivorView;
+
+    [SerializeField]
+    private LayerMask layerMask;
+
+    [SerializeField]
+    private DecalProjectorComponent decal;
 
     #endregion //Fields
 
@@ -23,6 +38,8 @@ public class Weapon : MonoBehaviour
         currentClip = maxCurrentClip;
         currentReserveClip = maxReserveClip;
 
+        //rayBulletStart = new Ray(nozzle.position, nozzle.forward * range);
+        rayBulletStart = new Ray(Camera.main.gameObject.transform.position, Camera.main.gameObject.transform.forward * range);
     }
 
     //TODO: What if this turns to be a 
@@ -43,13 +60,25 @@ public class Weapon : MonoBehaviour
 
     private void Shoot() {
 
-        Debug.DrawRay(nozzle.position, nozzle.forward * range, Color.red, 1f);
+        if (Physics.Raycast(survivorView.transform.position, survivorView.transform.forward, out RaycastHit hit, range, layerMask)) {
+
+            GameObject bullelHole = Instantiate(decal.gameObject, hit.point, hit.transform.rotation);
+
+            bullelHole.transform.SetParent(hit.transform);
+            if (hit.transform.gameObject.GetComponent<Beast>()) {
+
+                hit.transform.gameObject.GetComponent<Beast>().TakeDamage(damage);
+
+
+            }
+        }
+        //Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * range, Color.red, 1f);
 
         currentClip--;
 
         if (currentClip < 0)
             currentClip = 0;
-        //How to do a real raycast...
+ 
     }
 
     public void Reload() {

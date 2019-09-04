@@ -161,3 +161,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canAttack: 0
   damage: 10
+  maxHealth: 25
+  currentHealth: 0

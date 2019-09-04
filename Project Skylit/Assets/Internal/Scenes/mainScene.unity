@@ -185,6 +185,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8440670425795640836, guid: 9b8bcf530daebd945ab7992fee17b78f,
+        type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 2002495833}
+    - target: {fileID: 8440670425795640836, guid: 9b8bcf530daebd945ab7992fee17b78f,
+        type: 3}
+      propertyPath: survivorView
+      value: 
+      objectReference: {fileID: 2002495833}
+    - target: {fileID: 8440670425795640836, guid: 9b8bcf530daebd945ab7992fee17b78f,
+        type: 3}
+      propertyPath: decal
+      value: 
+      objectReference: {fileID: 4994386967894021706, guid: d9e0bfc30f92b6f4cb340fa338d41fd1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8bcf530daebd945ab7992fee17b78f, type: 3}
 --- !u!1 &78566655
@@ -632,6 +648,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Survivor
       objectReference: {fileID: 0}
+    - target: {fileID: 8566861620123256865, guid: b5117914fa713504a8f4089a65138064,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8568771387992330507, guid: b5117914fa713504a8f4089a65138064,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -716,6 +737,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784983656352538509, guid: b5117914fa713504a8f4089a65138064,
+        type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 2002495833}
+    - target: {fileID: 5784983656352538509, guid: b5117914fa713504a8f4089a65138064,
+        type: 3}
+      propertyPath: survivorView
+      value: 
+      objectReference: {fileID: 2002495833}
+    - target: {fileID: 5784983656352538509, guid: b5117914fa713504a8f4089a65138064,
+        type: 3}
+      propertyPath: decal
+      value: 
+      objectReference: {fileID: 4994386967894021706, guid: d9e0bfc30f92b6f4cb340fa338d41fd1,
+        type: 3}
+    - target: {fileID: 6435171111930569326, guid: b5117914fa713504a8f4089a65138064,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5117914fa713504a8f4089a65138064, type: 3}
@@ -1239,6 +1281,12 @@ Transform:
   m_Father: {fileID: 1601631299}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &2002495833 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8551220406986733191, guid: b5117914fa713504a8f4089a65138064,
+    type: 3}
+  m_PrefabInstance: {fileID: 884215184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2048963704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,6 +1385,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2137960841845887043, guid: f2e7375e03a01ef428b8c98c4060ce5b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744290789179594061, guid: f2e7375e03a01ef428b8c98c4060ce5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744290789177506799, guid: f2e7375e03a01ef428b8c98c4060ce5b,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744290789177506799, guid: f2e7375e03a01ef428b8c98c4060ce5b,
         type: 3}
       propertyPath: m_Enabled
       value: 1

@@ -10,7 +10,8 @@ public class Beast : MonoBehaviour
     private float attackTimer;
 
     [SerializeField]
-    private int damage;
+    private int damage, maxHealth, currentHealth;
+
 
     private Transform target;
 
@@ -26,6 +27,8 @@ public class Beast : MonoBehaviour
         damage = 1;
 
         target = this.gameObject.GetComponent<BeastNavigator>().target;
+
+        currentHealth = maxHealth;
     }
 
     private void Update()
@@ -46,6 +49,21 @@ public class Beast : MonoBehaviour
         target.gameObject.GetComponent<Barricade>().TakeDamage(damage);
 
     }
+
+    public void TakeDamage(int _damage) {
+
+        currentHealth -= _damage;
+        if (currentHealth < 1)
+            Die();
+    }
+
+    private void Die() {
+
+        Destroy(gameObject);
+
+    }
+
+
 
     #endregion //Methods
 }
