@@ -14,8 +14,19 @@ public class WeaponController : MonoBehaviour {
     private void Update() {
 
         //TODO: if check what type of weapon, gun or meele?
-        if (Input.GetButtonDown("Fire1"))
-            weapons.activeWeapon.Fire();
+
+        if(weapons.activeWeapon.fireType == FireType.semiAutomatic) {
+
+            if (Input.GetButtonDown("Fire1"))
+                weapons.activeWeapon.Fire();
+
+        }
+        else if(weapons.activeWeapon.fireType == FireType.automatic) {
+
+            if (Input.GetButton("Fire1"))
+                weapons.activeWeapon.Fire();
+
+        }
 
         if (Input.GetKeyDown(KeyCode.R)) {
             weapons.activeWeapon.Reload();
@@ -27,12 +38,8 @@ public class WeaponController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q))
             weapons.CyclePreviousWeapon();
 
-        
-        
         //TODO: Add the following inputs...
         //      Reload, NextWeapon, PreviousWeapon, Melee (hit with weapon(weapon's melee damage will be sent)).
-
-
 
     }
 

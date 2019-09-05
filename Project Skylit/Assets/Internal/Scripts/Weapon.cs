@@ -29,6 +29,15 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private DecalProjectorComponent decal;
 
+    [SerializeField]
+    private float fireRate;
+
+    public FireType fireType;
+
+    private float fireRateTimer;
+
+    private bool hasShot;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -38,29 +47,39 @@ public class Weapon : MonoBehaviour
         currentClip = maxCurrentClip;
         currentReserveClip = maxReserveClip;
 
-        //rayBulletStart = new Ray(nozzle.position, nozzle.forward * range);
-        rayBulletStart = new Ray(Camera.main.gameObject.transform.position, Camera.main.gameObject.transform.forward * range);
+        hasShot = false;
+        fireRateTimer = fireRate;
     }
 
-    //TODO: What if this turns to be a 
-    //TODO: <--- if you see this by itself, read the method and fix up comments...?
+    private void Update() {
+
+        if (hasShot) 
+            fireRateTimer += Time.deltaTime;
+
+    }
+
     public void Fire() {
 
-        if (currentClip > 0)
+        hasShot = true;
+
+        if ((currentClip > 0) && (fireRateTimer >= fireRate)) {
+
             Shoot();
+            fireRateTimer = 0f;
+            hasShot = false;
+
+        }
         else {
             //Inform survivor that he has no ammo to shoot.
         }
     }
 
-    public void CycleNextWeapon() {
-
-
-    }
-
     private void Shoot() {
 
-        if (Physics.Raycast(survivorView.transform.position, survivorView.transform.forward, out RaycastHit hit, range, layerMask)) {
+        rayBulletStart = new Ray(survivorView.transform.position, survivorView.transform.forward * range);
+        if (Physics.Raycast(rayBulletStart, out RaycastHit hit, range, layerMask)) {
+
+            Debug.Log(hit.transform.name);
 
             GameObject bullelHole = Instantiate(decal.gameObject, hit.point, hit.transform.rotation);
 
@@ -69,10 +88,9 @@ public class Weapon : MonoBehaviour
 
                 hit.transform.gameObject.GetComponent<Beast>().TakeDamage(damage);
 
-
             }
         }
-        //Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * range, Color.red, 1f);
+        Debug.DrawRay(survivorView.transform.position, survivorView.transform.forward * range, Color.red, 1f);
 
         currentClip--;
 
