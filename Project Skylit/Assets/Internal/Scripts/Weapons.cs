@@ -12,6 +12,8 @@ public class Weapons : MonoBehaviour
 
     public Weapon activeWeapon;
 
+    CanvasManager canvasManager;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -25,6 +27,9 @@ public class Weapons : MonoBehaviour
 
         amountOfWeapons = weaponList.Count;
         activeWeapon = weaponList.First();
+
+        CanvasManager.canvasManager.UpdateWeaponPanel(activeWeapon.name, activeWeapon.currentClip, activeWeapon.currentReserveClip,
+            activeWeapon.image);
     }
 
     public void CycleNextWeapon() {
@@ -42,7 +47,8 @@ public class Weapons : MonoBehaviour
         activeWeapon = weaponList[currentWeaponListIndex].GetComponent<Weapon>();
         activeWeapon.gameObject.SetActive(true);
 
-
+        CanvasManager.canvasManager.UpdateWeaponPanel(activeWeapon.name, activeWeapon.currentClip, activeWeapon.currentReserveClip,
+            activeWeapon.image);
     }
 
     public void CyclePreviousWeapon() {
@@ -60,6 +66,8 @@ public class Weapons : MonoBehaviour
         activeWeapon = weaponList[currentWeaponListIndex].GetComponent<Weapon>();
         activeWeapon.gameObject.SetActive(true);
 
+        CanvasManager.canvasManager.UpdateWeaponPanel(activeWeapon.name, activeWeapon.currentClip, activeWeapon.currentReserveClip,
+            activeWeapon.image);
     }
 
     #endregion //Methods

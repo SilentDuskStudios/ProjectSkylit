@@ -8,8 +8,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private int damage;
 
-    [SerializeField]
-    private int maxCurrentClip, maxReserveClip, currentClip, currentReserveClip;
+    public int maxCurrentClip, maxReserveClip, currentClip, currentReserveClip;
 
     [SerializeField]
     private float range;
@@ -37,6 +36,8 @@ public class Weapon : MonoBehaviour
     private float fireRateTimer;
 
     private bool hasShot;
+
+    public Sprite image;
 
     #endregion //Fields
 
@@ -96,7 +97,9 @@ public class Weapon : MonoBehaviour
 
         if (currentClip < 0)
             currentClip = 0;
- 
+
+        CanvasManager.canvasManager.UpdateWeaponPanel(this.gameObject.name, currentClip, currentReserveClip, image);
+
     }
 
     public void Reload() {
@@ -112,6 +115,8 @@ public class Weapon : MonoBehaviour
                 currentReserveClip--;
 
             }
+
+            CanvasManager.canvasManager.UpdateWeaponPanel(this.gameObject.name, currentClip, currentReserveClip,image);
         }
         else {
             Debug.Log("You cannot reload!");

@@ -204,8 +204,8 @@ MonoBehaviour:
   damage: 5
   maxCurrentClip: 9
   maxReserveClip: 45
-  currentClip: 0
-  currentReserveClip: 0
+  currentClip: 9
+  currentReserveClip: 45
   range: 40
   nozzle: {fileID: 8847070859187260182}
   survivorView: {fileID: 0}
@@ -215,6 +215,7 @@ MonoBehaviour:
   decal: {fileID: 4994386967894021706, guid: d9e0bfc30f92b6f4cb340fa338d41fd1, type: 3}
   fireRate: 0
   fireType: 0
+  image: {fileID: 2800000, guid: b2ab4cab5892a5546b4a23731d4a5dd8, type: 3}
 --- !u!65 &896809338319725673
 BoxCollider:
   m_ObjectHideFlags: 0

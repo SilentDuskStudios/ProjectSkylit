@@ -28,9 +28,8 @@ public class WeaponController : MonoBehaviour {
 
         }
 
-        if (Input.GetKeyDown(KeyCode.R)) {
+        if (Input.GetKeyDown(KeyCode.R))
             weapons.activeWeapon.Reload();
-        }
 
         if (Input.GetKeyDown(KeyCode.E))
             weapons.CycleNextWeapon();
@@ -38,8 +37,7 @@ public class WeaponController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q))
             weapons.CyclePreviousWeapon();
 
-        //TODO: Add the following inputs...
-        //      Reload, NextWeapon, PreviousWeapon, Melee (hit with weapon(weapon's melee damage will be sent)).
+        //Add Meele with weapon. weapon will have varying meele damage
 
     }
 
