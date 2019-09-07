@@ -65,6 +65,10 @@ public class Beast : MonoBehaviour {
 
     private void Die() {
 
+        WaveManager.waveManager.currentBeastCount--;
+
+        WaveManager.waveManager.CheckNextWave();
+
         Destroy(gameObject);
 
     }

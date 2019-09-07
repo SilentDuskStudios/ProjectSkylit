@@ -117,7 +117,7 @@ public class Weapon : MonoBehaviour
             CanvasManager.canvasManager.UpdateWeaponPanel(this.gameObject.name, currentClip, currentReserveClip,image);
         }
         else {
-            Debug.Log("You cannot reload!");
+            //TODO: Inform survivor that they cannot reload for reason {full clip OR no more ammo}
         }
 
     }

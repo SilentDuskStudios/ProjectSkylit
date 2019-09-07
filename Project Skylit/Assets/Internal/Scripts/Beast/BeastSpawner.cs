@@ -2,8 +2,8 @@
 
 using UnityEngine;
 
-public class BeastSpawner : MonoBehaviour
-{
+public class BeastSpawner : MonoBehaviour {
+
     #region " - - - - - - Fields - - - - - - "
 
     private float currentTimer;
@@ -24,6 +24,7 @@ public class BeastSpawner : MonoBehaviour
     [SerializeField]
     private Transform barricadeParent;
 
+    private WaveManager waveManager;
 
     #endregion
 
@@ -34,12 +35,13 @@ public class BeastSpawner : MonoBehaviour
 
         ResetTimers();
 
-        InitialiseList(ref beastSpawnLocations, beastSpawnerParent);
-        InitialiseList(ref barricadeLocations, barricadeParent);
+        InitialiseBeastSpawnPoints(ref beastSpawnLocations, beastSpawnerParent);
+        InitialiseBeastSpawnPoints(ref barricadeLocations, barricadeParent);
 
-    } //Start
+        waveManager = WaveManager.waveManager;
+    } 
 
-    private void InitialiseList(ref List<Transform> list, Transform parent)
+    private void InitialiseBeastSpawnPoints(ref List<Transform> list, Transform parent)
     {
         list = new List<Transform>();
 
@@ -50,19 +52,20 @@ public class BeastSpawner : MonoBehaviour
             i++;
         }
 
-    } //InitialiseList
+    }
 
     private void Update()
     {
         currentTimer += Time.deltaTime;
 
-        if (currentTimer >= spawnTime)
-        {
+        if((waveManager.CanSpawnBeast()) && (currentTimer >= spawnTime)) {
+
             SpawnBeast();
             ResetTimers();
+
         }
 
-    } //Update
+    }
 
     private void ResetTimers()
     {
@@ -77,7 +80,7 @@ public class BeastSpawner : MonoBehaviour
 
     }
 
-    //TODO: Add a parameter of type Enum that spawns specific beasts.
+    //TODO: Add a parameter of type Enum that spawns specific beasts
     private void SpawnBeast()
     {
         int _beastSpawnLocationIndex = Random.Range(0, beastSpawnLocations.Count);
@@ -89,6 +92,9 @@ public class BeastSpawner : MonoBehaviour
 
         //NOTES: One about when the barricade is destroyed, how do we update the beasts target to go to the survivor.
         _beast.GetComponent<BeastNavigator>().SetDestination(barricadeLocations[_barricadeLocationsIndex]);
+
+        waveManager.currentBeastCount++;
+        waveManager.beastSpawnCount++;
 
     }
 
