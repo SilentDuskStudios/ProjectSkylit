@@ -80,8 +80,6 @@ public class Weapon : MonoBehaviour
         rayBulletStart = new Ray(survivorView.transform.position, survivorView.transform.forward * range);
         if (Physics.Raycast(rayBulletStart, out RaycastHit hit, range, layerMask)) {
 
-            Debug.Log(hit.transform.name);
-
             GameObject bullelHole = Instantiate(decal.gameObject, hit.point, hit.transform.rotation);
 
             bullelHole.transform.SetParent(hit.transform);
