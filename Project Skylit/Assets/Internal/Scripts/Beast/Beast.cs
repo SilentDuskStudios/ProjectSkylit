@@ -5,18 +5,29 @@ public class Beast : MonoBehaviour {
 
     #region " - - - - - - Fields - - - - - - "
 
+   
+
     public bool canAttack;
 
     private float attackCooldown;
+
     private float attackTimer;
 
     [SerializeField]
-    private int damage, maxHealth, currentHealth;
+    private int maxHealth, damage;
+
+    private int currentHealth;
+
+
+    public MovementSpeedEnum movementSpeed;
 
     private Transform target;
 
     [SerializeField]
     private BeastHealthBar beastHealthBar;
+
+    [SerializeField]
+    public BeastTypeEnum beastType;
 
     #endregion //Fields
 
@@ -25,10 +36,8 @@ public class Beast : MonoBehaviour {
     private void Start()
     {
         canAttack = false;
-        attackCooldown = 2f;
         attackTimer = 0f;
-        damage = 1;
-
+        attackCooldown = 1f;
         target = this.gameObject.GetComponent<BeastNavigator>().target;
 
         currentHealth = maxHealth;
@@ -74,4 +83,5 @@ public class Beast : MonoBehaviour {
     }
 
     #endregion //Methods
+
 }

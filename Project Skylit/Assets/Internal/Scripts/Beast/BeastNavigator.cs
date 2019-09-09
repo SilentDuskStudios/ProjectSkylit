@@ -14,11 +14,18 @@ public class BeastNavigator : MonoBehaviour
 
     #region " - - - - - - Methods - - - - - - "
 
+
+
     public void SetDestination(Transform destination)
     {
         target = destination;
         navMeshAgent.destination = target.position;
 
+    }
+    
+    public void InitialiseMovementSpeed(int movementSpeed) {
+
+        navMeshAgent.speed = movementSpeed;
     }
 
     #endregion

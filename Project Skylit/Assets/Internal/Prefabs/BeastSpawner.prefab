@@ -137,7 +137,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d1a0d05a08c08459f8b4901d43953e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beast: {fileID: 8922113258566854162, guid: 734300baedfc6eb4a90cd7236e5bc24a, type: 3}
+  beasts:
+  - {fileID: 1354220325522903272, guid: 734300baedfc6eb4a90cd7236e5bc24a, type: 3}
+  - {fileID: 9005096129746713705, guid: 13cabd87b2878e649a536fc21358bee9, type: 3}
+  - {fileID: 8499754875340050580, guid: f50bdcb19c5077f4088f3828e2398161, type: 3}
+  - {fileID: 8679876703424533550, guid: 134d9f9e93a4b824d9372e3f4682151f, type: 3}
   beastSpawnerParent: {fileID: 2054762450303639593}
   barricadeParent: {fileID: 0}
 --- !u!1 &2054762450528932073

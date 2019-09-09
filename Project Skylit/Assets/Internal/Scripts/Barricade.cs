@@ -98,6 +98,8 @@ public class Barricade : MonoBehaviour
             navMeshObstacle.enabled = true;
     }
 
+    //TODO: Create an OnTriggerExit function and set canAttack to false;
+    //Additionally, update the beasts target.
     private void OnTriggerEnter(Collider other)
     {
         //This could be dangerous because the beast could be chasing the survivor but is still in the barricade 
@@ -110,6 +112,7 @@ public class Barricade : MonoBehaviour
             beast.canAttack = true;
         }
     }
+
 
     #endregion 
 }

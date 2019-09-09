@@ -124,10 +124,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  maxCurrentClip: 20
-  maxReserveClip: 100
-  currentClip: 20
-  currentReserveClip: 100
+  maxCurrentClip: 100
+  maxReserveClip: 1000
+  currentClip: 100
+  currentReserveClip: 1000
   range: 40
   nozzle: {fileID: 437510428006791303}
   survivorView: {fileID: 0}

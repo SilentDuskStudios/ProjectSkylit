@@ -14,6 +14,18 @@ public class WaveManager : MonoBehaviour {
 
     private int maxBeastCount;
 
+    public int beastObeseSpawnCount;
+
+    public int maxBeastObeseSpawnCount;
+
+    public int beastSprinterSpawnCount;
+
+    public int maxBeastSprinterSpawnCount;
+
+    public int beastBossSpawnCount;
+
+    public int maxBeastBossSpawnCount;
+
     #endregion
 
     #region " - - - - - - Methods - - - - - - "
@@ -35,14 +47,24 @@ public class WaveManager : MonoBehaviour {
         currentBeastCount = 0;
         maxBeastCount = 10;
         beastSpawnCount = 0;
+
+        maxBeastBossSpawnCount = 1;
+        
     }
 
     private void NextWave() {
 
         waveNumber++;
         currentBeastCount = 0;
-        maxBeastCount += 5;
+        maxBeastCount += 2;
         beastSpawnCount = 0;
+
+        maxBeastObeseSpawnCount += 1;
+        maxBeastSprinterSpawnCount += 1;
+
+        beastObeseSpawnCount = 0;
+        beastSprinterSpawnCount = 0;
+        beastBossSpawnCount = 0;
     }
 
     public bool CanSpawnBeast() {
@@ -60,6 +82,29 @@ public class WaveManager : MonoBehaviour {
 
             NextWave();
         }
+    }
+
+    public bool HasReachedSpawnCap(BeastTypeEnum beastType) {
+
+        switch(beastType) {
+
+            case BeastTypeEnum.obese:
+                if(beastObeseSpawnCount >= maxBeastObeseSpawnCount)
+                    return true;
+                break;
+
+            case BeastTypeEnum.sprinter:
+                if(beastSprinterSpawnCount >= maxBeastSprinterSpawnCount)
+                    return true;
+                break;
+
+            case BeastTypeEnum.boss:
+                if(beastBossSpawnCount >= maxBeastBossSpawnCount)
+                    return true;
+                break;
+        }
+
+        return false;
     }
 
     #endregion

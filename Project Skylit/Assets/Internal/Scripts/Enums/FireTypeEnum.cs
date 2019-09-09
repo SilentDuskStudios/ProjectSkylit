@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public enum FireType {
+﻿public enum FireType {
 
     semiAutomatic,
     automatic
