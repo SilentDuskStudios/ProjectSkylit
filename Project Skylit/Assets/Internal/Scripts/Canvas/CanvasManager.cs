@@ -10,6 +10,9 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private WeaponPanel weaponPanel;
 
+    [SerializeField]
+    private WavePanel wavePanel;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -26,10 +29,16 @@ public class CanvasManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+
     public void UpdateWeaponPanel(string weaponName, int currentClip, int currentReserveClip, Sprite image) {
 
         weaponPanel.UpdateWeaponUI(weaponName, currentClip, currentReserveClip, image);
         
+    }
+
+    public void UpdateWavePanel(int waveNumber) {
+
+        wavePanel.UpdateWaveUI(waveNumber);
     }
 
     #endregion //Methods

@@ -49,7 +49,8 @@ public class WaveManager : MonoBehaviour {
         beastSpawnCount = 0;
 
         maxBeastBossSpawnCount = 1;
-        
+
+        CanvasManager.canvasManager.UpdateWavePanel(waveNumber);
     }
 
     private void NextWave() {
@@ -65,6 +66,8 @@ public class WaveManager : MonoBehaviour {
         beastObeseSpawnCount = 0;
         beastSprinterSpawnCount = 0;
         beastBossSpawnCount = 0;
+
+        CanvasManager.canvasManager.UpdateWavePanel(waveNumber);
     }
 
     public bool CanSpawnBeast() {
