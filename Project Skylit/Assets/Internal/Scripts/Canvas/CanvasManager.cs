@@ -13,6 +13,9 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private WavePanel wavePanel;
 
+    [SerializeField]
+    private CurrencyPanel currencyPanel;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -26,7 +29,7 @@ public class CanvasManager : MonoBehaviour
 
         }
         else
-            Destroy(gameObject);
+            Destroy(this.gameObject);
     }
 
 
@@ -39,6 +42,11 @@ public class CanvasManager : MonoBehaviour
     public void UpdateWavePanel(int waveNumber) {
 
         wavePanel.UpdateWaveUI(waveNumber);
+    }
+
+    public void UpdateCurrencyPanel(int currency) {
+
+        currencyPanel.UpdateCurrencyPanel(currency);
     }
 
     #endregion //Methods

@@ -194,6 +194,7 @@ MonoBehaviour:
   movementSpeed: 2
   beastHealthBar: {fileID: 8800538661091255099}
   beastType: 1
+  currencyValue: 3
 --- !u!1 &2165382066606363546
 GameObject:
   m_ObjectHideFlags: 0

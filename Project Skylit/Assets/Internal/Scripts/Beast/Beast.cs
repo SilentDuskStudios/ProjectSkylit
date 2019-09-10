@@ -5,8 +5,6 @@ public class Beast : MonoBehaviour {
 
     #region " - - - - - - Fields - - - - - - "
 
-   
-
     public bool canAttack;
 
     private float attackCooldown;
@@ -28,6 +26,9 @@ public class Beast : MonoBehaviour {
 
     [SerializeField]
     public BeastTypeEnum beastType;
+
+    [SerializeField]
+    private int currencyValue;
 
     #endregion //Fields
 
@@ -78,7 +79,11 @@ public class Beast : MonoBehaviour {
 
         WaveManager.waveManager.CheckNextWave();
 
-        Destroy(gameObject);
+        Currency.currency.Add(currencyValue);
+
+        CanvasManager.canvasManager.UpdateCurrencyPanel(Currency.currency.GetCurrentCurrency());
+
+        Destroy(this.gameObject);
 
     }
 
