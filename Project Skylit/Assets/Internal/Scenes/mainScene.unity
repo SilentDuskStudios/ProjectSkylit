@@ -2352,6 +2352,12 @@ Transform:
   m_Father: {fileID: 78566656}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1472995477 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1289179094139374613, guid: 26e95acf07a76fa438950854fdc88871,
+    type: 3}
+  m_PrefabInstance: {fileID: 7442229346921510658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1519619364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,6 +2986,11 @@ PrefabInstance:
       propertyPath: weaponPanel
       value: 
       objectReference: {fileID: 782742603}
+    - target: {fileID: 6963994599423714636, guid: 26e95acf07a76fa438950854fdc88871,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1472995477}
     - target: {fileID: 1270710006439357337, guid: 26e95acf07a76fa438950854fdc88871,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3049,6 +3060,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365574539208968823, guid: 26e95acf07a76fa438950854fdc88871,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.133
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248258722761246093, guid: 26e95acf07a76fa438950854fdc88871,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26e95acf07a76fa438950854fdc88871, type: 3}

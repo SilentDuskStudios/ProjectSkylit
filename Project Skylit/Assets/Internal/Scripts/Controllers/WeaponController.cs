@@ -37,6 +37,11 @@ public class WeaponController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q))
             weapons.CyclePreviousWeapon();
 
+        if(Input.GetMouseButtonDown(1))
+            weapons.AimDownSight(true);
+
+        if (Input.GetMouseButtonUp(1))
+            weapons.AimDownSight(false);
         //Add Meele with weapon. weapon will have varying meele damage
 
     }

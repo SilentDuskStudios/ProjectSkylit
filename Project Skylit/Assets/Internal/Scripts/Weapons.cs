@@ -14,6 +14,9 @@ public class Weapons : MonoBehaviour
 
     CanvasManager canvasManager;
 
+    [SerializeField]
+    private Camera camera;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -74,6 +77,22 @@ public class Weapons : MonoBehaviour
 
         CanvasManager.canvasManager.UpdateWeaponPanel(activeWeapon.name, activeWeapon.currentClip, activeWeapon.currentReserveClip,
             activeWeapon.image);
+    }
+
+    
+    public void AimDownSight(bool flag) {
+
+        //flag parameter determines whether the survivor is aiming down the sight or not.
+        //TODO: Lower mouse sensitivity 
+        if (flag) {
+            camera.fieldOfView = 50f;
+            this.gameObject.transform.localPosition = new Vector3(0, -0.5f, 1);
+        }
+
+        else {
+            camera.fieldOfView = 60f;
+            this.gameObject.transform.localPosition = new Vector3(-1, -0.8f, 2.2f);
+        }
     }
 
     #endregion //Methods
