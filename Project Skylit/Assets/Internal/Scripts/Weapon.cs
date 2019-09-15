@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Experimental.Rendering.HDPipeline;
 
 public class Weapon : MonoBehaviour
@@ -39,6 +40,11 @@ public class Weapon : MonoBehaviour
 
     public Sprite image;
 
+    private bool reloading;
+
+    [SerializeField]
+    private float reloadTime;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -57,22 +63,6 @@ public class Weapon : MonoBehaviour
         if (hasShot) 
             fireRateTimer += Time.deltaTime;
 
-    }
-
-    public void Fire() {
-
-        hasShot = true;
-
-        if ((currentClip > 0) && (fireRateTimer >= fireRate)) {
-
-            Shoot();
-            fireRateTimer = 0f;
-            hasShot = false;
-
-        }
-        else {
-            //Inform survivor that he has no ammo to shoot.
-        }
     }
 
     private void Shoot() {
@@ -100,21 +90,46 @@ public class Weapon : MonoBehaviour
 
     }
 
-    public void Reload() {
+    public void Fire() {
 
-        if (CanReload()) {
+        if (reloading)
+            return;
 
-            while(currentClip != maxCurrentClip) {
+        hasShot = true;
+
+        if ((currentClip > 0) && (fireRateTimer >= fireRate)) {
+
+            Shoot();
+            fireRateTimer = 0f;
+            hasShot = false;
+
+        }
+        else {
+            //Inform survivor that he has no ammo to shoot.
+        }
+    }
+
+    public IEnumerator Reload() {
+
+        if ((CanReload()) && (!reloading)) {
+
+            reloading = true;
+
+            CanvasManager.canvasManager.UpdateWeaponPanel(reloadTime);
+            yield return new WaitForSeconds(reloadTime);
+
+            while (currentClip != maxCurrentClip) {
 
                 if (currentReserveClip < 1)
-                    return;
+                    break;
 
                 currentClip++;
                 currentReserveClip--;
-
             }
 
-            CanvasManager.canvasManager.UpdateWeaponPanel(this.gameObject.name, currentClip, currentReserveClip,image);
+            CanvasManager.canvasManager.UpdateWeaponPanel(this.gameObject.name, currentClip, currentReserveClip, image);
+
+            reloading = false;
         }
         else {
             //TODO: Inform survivor that they cannot reload for reason {full clip OR no more ammo}
@@ -126,6 +141,14 @@ public class Weapon : MonoBehaviour
 
         return ((currentClip != maxCurrentClip) && (currentReserveClip > 0));
 
+    }
+
+    public bool IsReloading() {
+
+        if (reloading)
+            return true;
+        else
+            return false;
     }
 
     #endregion //Methods

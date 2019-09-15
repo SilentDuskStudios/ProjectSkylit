@@ -39,6 +39,12 @@ public class CanvasManager : MonoBehaviour
         
     }
 
+    public void UpdateWeaponPanel(float reloadTime) {
+
+        weaponPanel.UpdateReloadBar(reloadTime);
+    }
+
+
     public void UpdateWavePanel(int waveNumber) {
 
         wavePanel.UpdateWaveUI(waveNumber);

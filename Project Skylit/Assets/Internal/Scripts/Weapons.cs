@@ -34,6 +34,9 @@ public class Weapons : MonoBehaviour
 
     public void CycleNextWeapon() {
 
+        if (activeWeapon.IsReloading())
+            return;
+
         activeWeapon.gameObject.SetActive(false);
 
         int currentWeaponListIndex = weaponList.IndexOf(activeWeapon);
@@ -52,6 +55,9 @@ public class Weapons : MonoBehaviour
     }
 
     public void CyclePreviousWeapon() {
+
+        if (activeWeapon.IsReloading())
+            return;
 
         activeWeapon.gameObject.SetActive(false);
 

@@ -138,6 +138,7 @@ MonoBehaviour:
   fireRate: 0.025
   fireType: 1
   image: {fileID: 21300000, guid: e784bc08a17d87a439593825188650a3, type: 3}
+  reloadTime: 3
 --- !u!1 &5791658464454409497
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ public class WeaponController : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.R))
-            weapons.activeWeapon.Reload();
+            StartCoroutine(weapons.activeWeapon.Reload());
 
         if (Input.GetKeyDown(KeyCode.E))
             weapons.CycleNextWeapon();
