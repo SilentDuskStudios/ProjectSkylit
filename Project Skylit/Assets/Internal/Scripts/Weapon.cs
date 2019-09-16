@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
     private float range;
 
     [SerializeField]
-    private Transform nozzle;
+    private Transform muzzle;
 
     //TODO: I want to rename this field.
     Ray rayBulletStart;

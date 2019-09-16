@@ -129,7 +129,7 @@ MonoBehaviour:
   currentClip: 100
   currentReserveClip: 1000
   range: 40
-  nozzle: {fileID: 437510428006791303}
+  muzzle: {fileID: 437510428006791303}
   survivorView: {fileID: 0}
   layerMask:
     serializedVersion: 2
@@ -413,7 +413,7 @@ PrefabInstance:
     - target: {fileID: 5164451901494267980, guid: 40649116e7bc19f47b066f564067937e,
         type: 3}
       propertyPath: m_Name
-      value: Nozzle
+      value: Muzzle
       objectReference: {fileID: 0}
     - target: {fileID: 2385982588615989874, guid: 40649116e7bc19f47b066f564067937e,
         type: 3}
