@@ -17,6 +17,9 @@ public class Barricade : MonoBehaviour
     [SerializeField]
     private NavMeshObstacle navMeshObstacle;
 
+    [SerializeField]
+    private int barricadeID;
+
     #endregion
 
     #region " - - - - - - Methods - - - - - - "
@@ -37,6 +40,8 @@ public class Barricade : MonoBehaviour
 
         if (currentHealth < 0)
             currentHealth = 0;
+
+        CanvasManager.canvasManager.UpdateBarricadePanel(barricadeID, currentHealth, maxHealth);
 
         UpdateMesh();
     }

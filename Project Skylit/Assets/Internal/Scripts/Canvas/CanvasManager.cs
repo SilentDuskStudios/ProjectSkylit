@@ -16,6 +16,9 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private CurrencyPanel currencyPanel;
 
+    [SerializeField]
+    private BarricadePanel barricadePanel;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -53,6 +56,11 @@ public class CanvasManager : MonoBehaviour
     public void UpdateCurrencyPanel(int currency) {
 
         currencyPanel.UpdateCurrencyPanel(currency);
+    }
+
+    public void UpdateBarricadePanel(int barricadeID, int currentHealth, int maxHealth) {
+
+        barricadePanel.UpdateBarricadeHealthBar(barricadeID, currentHealth, maxHealth);
     }
 
     #endregion //Methods
