@@ -19,6 +19,9 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private BarricadePanel barricadePanel;
 
+    [SerializeField]
+    private InteractionPanel interactionPanel;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -61,6 +64,16 @@ public class CanvasManager : MonoBehaviour
     public void UpdateBarricadePanel(int barricadeID, int currentHealth, int maxHealth) {
 
         barricadePanel.UpdateBarricadeHealthBar(barricadeID, currentHealth, maxHealth);
+    }
+
+    public void UpdateInteractionPanel(InteractionTypeEnum interactionType) {
+
+        interactionPanel.UpdateInteractionPanel(interactionType);
+    }
+
+    public void HideInteractionPanel() {
+
+        interactionPanel.HideInteractionPanel();
     }
 
     #endregion //Methods

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//TODO: Change this to debugging or something.
 public class ModifyTimeScale : MonoBehaviour
 {
     #region " - - - - - - Fields - - - - - - "

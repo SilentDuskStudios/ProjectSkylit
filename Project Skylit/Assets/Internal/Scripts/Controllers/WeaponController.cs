@@ -15,13 +15,13 @@ public class WeaponController : MonoBehaviour {
 
         //TODO: if check what type of weapon, gun or meele?
 
-        if(weapons.activeWeapon.fireType == FireType.semiAutomatic) {
+        if(weapons.activeWeapon.fireType == FireTypeEnum.semiAutomatic) {
 
             if (Input.GetButtonDown("Fire1"))
                 weapons.activeWeapon.Fire();
 
         }
-        else if(weapons.activeWeapon.fireType == FireType.automatic) {
+        else if(weapons.activeWeapon.fireType == FireTypeEnum.automatic) {
 
             if (Input.GetButton("Fire1"))
                 weapons.activeWeapon.Fire();
@@ -32,7 +32,7 @@ public class WeaponController : MonoBehaviour {
             StartCoroutine(weapons.activeWeapon.Reload());
 
         if (Input.GetKeyDown(KeyCode.E))
-            weapons.CycleNextWeapon();
+            weapons.CycleNextWeapon(); 
 
         if (Input.GetKeyDown(KeyCode.Q))
             weapons.CyclePreviousWeapon();

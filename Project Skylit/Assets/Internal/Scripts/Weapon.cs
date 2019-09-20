@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
     Ray rayBulletStart;
 
     [SerializeField]
-    private Camera survivorView;
+    private Camera survivorCamera;
 
     [SerializeField]
     private LayerMask layerMask;
@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float fireRate;
 
-    public FireType fireType;
+    public FireTypeEnum fireType;
 
     private float fireRateTimer;
 
@@ -67,7 +67,9 @@ public class Weapon : MonoBehaviour
 
     private void Shoot() {
 
-        rayBulletStart = new Ray(survivorView.transform.position, survivorView.transform.forward * range);
+        //TODO: rename the ray?
+        rayBulletStart = new Ray(survivorCamera.transform.position, survivorCamera.transform.forward * range);
+
         if (Physics.Raycast(rayBulletStart, out RaycastHit hit, range, layerMask)) {
 
             GameObject bullelHole = Instantiate(decal.gameObject, hit.point, hit.transform.rotation);
@@ -79,7 +81,7 @@ public class Weapon : MonoBehaviour
 
             }
         }
-        Debug.DrawRay(survivorView.transform.position, survivorView.transform.forward * range, Color.red, 1f);
+        Debug.DrawRay(survivorCamera.transform.position, survivorCamera.transform.forward * range, Color.red, 1f);
 
         currentClip--;
 

@@ -17,6 +17,9 @@ public class Weapons : MonoBehaviour
     [SerializeField]
     private Camera camera;
 
+    [SerializeField]
+    private FirstPersonAIO firstPersonAIO;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -86,11 +89,13 @@ public class Weapons : MonoBehaviour
         //TODO: Lower mouse sensitivity 
         if (flag) {
             camera.fieldOfView = 50f;
+            firstPersonAIO.mouseSensitivity = 1.5f;
             this.gameObject.transform.localPosition = new Vector3(0, -0.5f, 1);
         }
 
         else {
             camera.fieldOfView = 60f;
+            firstPersonAIO.mouseSensitivity = 4f;
             this.gameObject.transform.localPosition = new Vector3(-1, -0.8f, 2.2f);
         }
     }
