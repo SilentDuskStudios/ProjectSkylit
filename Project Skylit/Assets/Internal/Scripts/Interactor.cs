@@ -30,7 +30,7 @@ public class Interactor : MonoBehaviour {
             if (Physics.Raycast(interactionRay, out RaycastHit hit, interactionRange, layerMask))
                 CanvasManager.canvasManager.UpdateInteractionPanel(interactionType.Value);
             else
-                CanvasManager.canvasManager.HideInteractionPanel();
+                CanvasManager.canvasManager.DisableInteractionPanel();
         }
     }
 
@@ -42,8 +42,8 @@ public class Interactor : MonoBehaviour {
 
             if(Physics.Raycast(interactionRay, out RaycastHit hit, interactionRange, layerMask)) {
 
-
-                Debug.Log("You are interacting with: " + interactionType);
+                //TODO: Add a switch case to determine what to do with what you are interacting with...
+                CanvasManager.canvasManager.EnableShopPanel();
             }
         }
     }

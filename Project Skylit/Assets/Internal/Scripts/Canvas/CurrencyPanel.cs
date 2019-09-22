@@ -19,6 +19,16 @@ public class CurrencyPanel : MonoBehaviour {
         currencyText.text = currency.ToString();
     }
 
+    public void EnableCurrencyPanel() {
+
+        this.gameObject.SetActive(true);
+    }
+
+    public void DisableCurrencyPanel() {
+
+        this.gameObject.SetActive(false);
+    }
+
     #endregion
 
 }

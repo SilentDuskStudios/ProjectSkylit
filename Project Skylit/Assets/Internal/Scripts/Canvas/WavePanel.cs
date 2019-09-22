@@ -18,6 +18,16 @@ public class WavePanel : MonoBehaviour {
         waveNumberText.text = waveNumber.ToString();
     }
 
+    public void EnableWavePanel() {
+
+        this.gameObject.SetActive(true);
+    }
+
+    public void DisableWavePanel() {
+
+        this.gameObject.SetActive(false);
+    }
+
     #endregion
 
 }

@@ -17,6 +17,16 @@ public class BarricadePanel : MonoBehaviour {
         barricadeHealthBarSliders[barricadeID].value = (float)currentHealth / (float)maxHealth;
     }
 
+    public void EnableBarricadePanel() {
+
+        this.gameObject.SetActive(true);
+    }
+
+    public void DisableBarricadePanel() {
+
+        this.gameObject.SetActive(false);
+    }
+
     #endregion
 
 }

@@ -20,10 +20,9 @@ public class InteractionPanel : MonoBehaviour {
         interactionText.text = "Press F interact with: " + interactionType;
     }
 
-    public void HideInteractionPanel() {
+    public void DisableInteractionPanel() {
 
         this.gameObject.SetActive(false);
-        interactionText.text = string.Empty;
     }
 
     #endregion

@@ -67,5 +67,15 @@ public class WeaponPanel : MonoBehaviour
         reloadBarSlider.gameObject.SetActive(false);
     }
 
+    public void EnableWeaponPanel() {
+
+        this.gameObject.SetActive(true);
+    }
+
+    public void DisableWeaponPanel() {
+
+        this.gameObject.SetActive(false);
+    }
+
     #endregion //Methods
 }

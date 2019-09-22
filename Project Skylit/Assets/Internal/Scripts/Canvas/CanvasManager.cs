@@ -22,6 +22,12 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private InteractionPanel interactionPanel;
 
+    [SerializeField]
+    private ShopPanel shopPanel;
+
+    [SerializeField]
+    private ReticlePanel reticlePanel;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -71,10 +77,45 @@ public class CanvasManager : MonoBehaviour
         interactionPanel.UpdateInteractionPanel(interactionType);
     }
 
-    public void HideInteractionPanel() {
+    public void DisableInteractionPanel() {
 
-        interactionPanel.HideInteractionPanel();
+        interactionPanel.DisableInteractionPanel();
+    }
+
+    public void EnableShopPanel() {
+
+        DisableMainPanels();
+        shopPanel.EnableShopPanel();
+        GameManager.gameManager.inputManager.EnableCursor();
+        GameManager.gameManager.inputManager.DisableSurvivorControls();
+    }
+
+    public void DisableShopPanel() {
+
+        EnableMainPanels();
+        shopPanel.DisableShopPanel();
+        GameManager.gameManager.inputManager.DisableCursor();
+        GameManager.gameManager.inputManager.EnableSurvivorControls();
+    }
+
+    private void EnableMainPanels() {
+
+        weaponPanel.EnableWeaponPanel();
+        wavePanel.EnableWavePanel();
+        currencyPanel.EnableCurrencyPanel();
+        barricadePanel.EnableBarricadePanel();
+        reticlePanel.EnableReticlePanel();
+    }
+
+    private void DisableMainPanels() {
+
+        weaponPanel.DisableWeaponPanel();
+        wavePanel.DisableWavePanel();
+        currencyPanel.DisableCurrencyPanel();
+        barricadePanel.DisableBarricadePanel();
+        reticlePanel.DisableReticlePanel();
     }
 
     #endregion //Methods
 }
+ 

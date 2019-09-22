@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//TODO: Rename to Interactable?
 public class Interaction : MonoBehaviour {
 
     #region " - - - - - - Fields - - - - - - "
@@ -26,7 +27,7 @@ public class Interaction : MonoBehaviour {
 
             other.gameObject.GetComponent<Survivor>().survivorController.interactionController.interactor.inInteractionTrigger = false;
             other.gameObject.GetComponent<Survivor>().survivorController.interactionController.interactor.interactionType = null;
-            CanvasManager.canvasManager.HideInteractionPanel();
+            CanvasManager.canvasManager.DisableInteractionPanel();
         }
     }
 
