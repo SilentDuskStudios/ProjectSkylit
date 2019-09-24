@@ -204,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   itemName: Pistol
+  price: 15
   damage: 8
   maxCurrentClip: 100
   maxReserveClip: 100
@@ -247,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   itemName: 
+  price: 0
 --- !u!1001 &6619071643977781604
 PrefabInstance:
   m_ObjectHideFlags: 0

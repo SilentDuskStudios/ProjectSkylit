@@ -12,13 +12,13 @@ public class CurrencyPanel : MonoBehaviour {
 
     #region " - - - - - - Methods - - - - - - "
 
-
-
     public void UpdateCurrencyPanel(int currency) {
 
         currencyText.text = currency.ToString();
     }
 
+    //TODO: Have all the xPanel (i.e CurrencyPanel, WeaponPanel, etc extend from base Panel). So that you don't need
+    //to repeat this enable/disablepanel stuff. You can just simply move that to a base class.
     public void EnableCurrencyPanel() {
 
         this.gameObject.SetActive(true);

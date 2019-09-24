@@ -1,26 +1,15 @@
 ﻿using UnityEngine;
 
-public class Currency : MonoBehaviour {
+//TODO: Have all xManagers inherit from GameManager?
+public class CurrencyManager : MonoBehaviour {
 
     #region " - - - - - - Fields - - - - - - "
-
-    public static Currency currency;
 
     private int currentCurrency;
 
     #endregion
 
     #region " - - - - - - Methods - - - - - - "
-
-    private void Awake() {
-
-        if (currency == null) {
-            currency = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-            Destroy(this.gameObject);
-    }
 
     private void Start() {
 
@@ -30,17 +19,20 @@ public class Currency : MonoBehaviour {
     public void Add(int amount) {
 
         currentCurrency += amount;
+        CanvasManager.canvasManager.UpdateCurrencyPanel(currentCurrency);
     }
 
-    public void Subtract(int amount) {
+    public void Deduct(int amount) {
 
         currentCurrency -= amount;
+        CanvasManager.canvasManager.UpdateCurrencyPanel(currentCurrency);
     }
 
     public int GetCurrentCurrency() {
 
         return currentCurrency;
     }
+
 
     #endregion
 }

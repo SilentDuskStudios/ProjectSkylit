@@ -125,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   itemName: Skorpion
+  price: 30
   damage: 5
   maxCurrentClip: 100
   maxReserveClip: 1000

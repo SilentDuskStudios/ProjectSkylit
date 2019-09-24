@@ -79,9 +79,7 @@ public class Beast : MonoBehaviour {
 
         WaveManager.waveManager.CheckNextWave();
 
-        Currency.currency.Add(currencyValue);
-
-        CanvasManager.canvasManager.UpdateCurrencyPanel(Currency.currency.GetCurrentCurrency());
+        GameManager.gameManager.currencyManager.Add(currencyValue);
 
         Destroy(this.gameObject);
 

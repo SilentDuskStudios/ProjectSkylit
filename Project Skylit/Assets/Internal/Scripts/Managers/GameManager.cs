@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
 
     public ItemManager itemManager;
 
+    public CurrencyManager currencyManager;
+
     #endregion
 
     #region " - - - - - - Methods - - - - - - "

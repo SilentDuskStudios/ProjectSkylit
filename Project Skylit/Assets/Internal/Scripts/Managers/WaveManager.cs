@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//TODO: remove static, access this through GameManager
 public class WaveManager : MonoBehaviour {
 
     #region " - - - - - - Fields - - - - - - "
