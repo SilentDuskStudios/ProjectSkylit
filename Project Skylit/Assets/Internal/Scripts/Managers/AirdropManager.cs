@@ -7,16 +7,13 @@ public class AirdropManager : MonoBehaviour {
     [SerializeField]
     private Airdrop airdrop;
 
-    [SerializeField]
-    private Transform airdropLocation;
-
     #endregion
 
     #region " - - - - - - Methods - - - - - - "
 
     public void SpawnAirdrop(Item item) {
 
-        Airdrop _airdrop = Instantiate(airdrop.gameObject, airdropLocation.position, airdropLocation.rotation).GetComponent<Airdrop>();
+        Airdrop _airdrop = Instantiate(airdrop.gameObject, this.transform.position, this.transform.rotation).GetComponent<Airdrop>();
 
         _airdrop.AddItemToAirdrop(item);
     }

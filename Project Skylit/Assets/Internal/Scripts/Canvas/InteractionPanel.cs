@@ -17,7 +17,7 @@ public class InteractionPanel : MonoBehaviour {
     public void UpdateInteractionPanel(InteractionTypeEnum interactionType) {
 
         this.gameObject.SetActive(true);
-        interactionText.text = "Press F interact with: " + interactionType;
+        interactionText.text = "Press F to interact with: " + interactionType;
     }
 
     public void DisableInteractionPanel() {

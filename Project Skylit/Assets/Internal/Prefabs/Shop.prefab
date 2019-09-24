@@ -183,6 +183,31 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.3250715
       objectReference: {fileID: 0}
+    - target: {fileID: 5931499251710641080, guid: 859a3b1b6dd26854688e2ee3151a288e,
+        type: 3}
+      propertyPath: interactionType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931499251710641081, guid: 859a3b1b6dd26854688e2ee3151a288e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.556419
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931499251710641081, guid: 859a3b1b6dd26854688e2ee3151a288e,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -1.2782096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931499251710641081, guid: 859a3b1b6dd26854688e2ee3151a288e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.008451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931499251710641081, guid: 859a3b1b6dd26854688e2ee3151a288e,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 2.0516021
+      objectReference: {fileID: 0}
     - target: {fileID: 5931499251323156703, guid: 859a3b1b6dd26854688e2ee3151a288e,
         type: 3}
       propertyPath: m_Size.x
@@ -213,29 +238,9 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.30173966
       objectReference: {fileID: 0}
-    - target: {fileID: 5931499251710641081, guid: 859a3b1b6dd26854688e2ee3151a288e,
+    - target: {fileID: 5931499251323156703, guid: 859a3b1b6dd26854688e2ee3151a288e,
         type: 3}
-      propertyPath: m_Size.y
-      value: 5.556419
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931499251710641081, guid: 859a3b1b6dd26854688e2ee3151a288e,
-        type: 3}
-      propertyPath: m_Center.y
-      value: -1.2782096
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931499251710641081, guid: 859a3b1b6dd26854688e2ee3151a288e,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 3.008451
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931499251710641081, guid: 859a3b1b6dd26854688e2ee3151a288e,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 2.0516021
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931499251710641080, guid: 859a3b1b6dd26854688e2ee3151a288e,
-        type: 3}
-      propertyPath: interactionType
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

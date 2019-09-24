@@ -86,7 +86,6 @@ public class Weapons : MonoBehaviour {
     public void AimDownSight(bool flag) {
 
         //flag parameter determines whether the survivor is aiming down the sight or not.
-        //TODO: Lower mouse sensitivity 
         if (flag) {
             camera.fieldOfView = 50f;
             firstPersonAIO.mouseSensitivity = 1.5f;

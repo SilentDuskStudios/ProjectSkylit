@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-//TODO: Rename to Interactable?
+//TODO: Rename ot Interactable
 public class Interaction : MonoBehaviour {
 
     #region " - - - - - - Fields - - - - - - "

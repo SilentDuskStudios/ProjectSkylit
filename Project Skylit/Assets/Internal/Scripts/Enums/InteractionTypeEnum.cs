@@ -1,7 +1,7 @@
 ﻿public enum InteractionTypeEnum {
 
     None,
-    ShopMenu,
+    Shop,
     RepairBarricade,
-    RetrievePackage
+    Airdrop
 }

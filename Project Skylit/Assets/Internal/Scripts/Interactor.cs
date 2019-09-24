@@ -42,8 +42,17 @@ public class Interactor : MonoBehaviour {
 
             if(Physics.Raycast(interactionRay, out RaycastHit hit, interactionRange, layerMask)) {
 
-                //TODO: Add a switch case to determine what to do with what you are interacting with...
-                CanvasManager.canvasManager.EnableShopPanel();
+                switch (interactionType) {
+                    case InteractionTypeEnum.Shop:
+                        CanvasManager.canvasManager.EnableShopPanel();
+                        break;
+
+                    case InteractionTypeEnum.Airdrop:
+                        Debug.Log("You have retrieved a: " + hit.transform.gameObject.GetComponent<Airdrop>().item.itemName);
+                        break;
+                }
+
+                
             }
         }
     }

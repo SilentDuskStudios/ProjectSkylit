@@ -4452,7 +4452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airdrop: {fileID: 7568927656691341150, guid: 2dabc4923bc63c74cb3a115a38791e32, type: 3}
-  airdropLocation: {fileID: 1413309525}
 --- !u!4 &1413309525
 Transform:
   m_ObjectHideFlags: 0
@@ -6506,6 +6505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 350352428421205684, guid: 7e66866eee83ab940a0b0ef5e9fcc396,
+        type: 3}
+      propertyPath: interactionType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e66866eee83ab940a0b0ef5e9fcc396, type: 3}

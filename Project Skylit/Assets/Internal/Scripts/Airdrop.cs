@@ -17,8 +17,7 @@ public class Airdrop : MonoBehaviour {
     [SerializeField]
     private LayerMask layerMask;
 
-    [SerializeField]
-    private Item item;
+    public Item item;
 
     #endregion
 
