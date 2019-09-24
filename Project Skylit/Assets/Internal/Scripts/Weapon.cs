@@ -2,8 +2,8 @@
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.HDPipeline;
 
-public class Weapon : MonoBehaviour
-{
+public class Weapon : Item {
+
     #region " - - - - - - Fields - - - - - - "
 
     [SerializeField]

@@ -543,7 +543,7 @@ Transform:
   - {fileID: 1472064662}
   - {fileID: 766140774}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &94222051
 GameObject:
@@ -786,11 +786,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2035378811}
         m_MethodName: BuyItem
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: Skorpion
           m_BoolArgument: 0
@@ -2400,11 +2400,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2035378811}
         m_MethodName: BuyItem
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: AK47
           m_BoolArgument: 0
@@ -4222,6 +4222,11 @@ PrefabInstance:
       propertyPath: Crosshair
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3307848681751057404, guid: 76cdbb9ee83c0e0499b5e5128b4bb694,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76cdbb9ee83c0e0499b5e5128b4bb694, type: 3}
 --- !u!1 &1240273773
@@ -4417,6 +4422,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348918188}
   m_CullTransparentMesh: 0
+--- !u!1 &1413309523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1413309525}
+  - component: {fileID: 1413309524}
+  m_Layer: 0
+  m_Name: AirdropManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1413309524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413309523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f218c7e8bb0672e48bd91e2771973ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  airdrop: {fileID: 7568927656691341150, guid: 2dabc4923bc63c74cb3a115a38791e32, type: 3}
+  airdropLocation: {fileID: 1413309525}
+--- !u!4 &1413309525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413309523}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22, y: 100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1733802840}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441638030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4933,6 +4983,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 872302e4e8f71dc449bfaa3ae53d41be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1584211888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1584211890}
+  - component: {fileID: 1584211889}
+  m_Layer: 0
+  m_Name: ItemManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1584211889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584211888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6182ea24fc7badd48bb01349e064443b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDatabase:
+  - {fileID: 1049241514312970383, guid: 2de4aecf997cc6046941016cc806705d, type: 3}
+  - {fileID: 8440670425795640836, guid: 9b8bcf530daebd945ab7992fee17b78f, type: 3}
+--- !u!4 &1584211890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584211888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1733802840}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1594967747
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5347,6 +5443,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 1240273774}
+  airdropManager: {fileID: 1413309524}
+  itemManager: {fileID: 1584211889}
 --- !u!4 &1733802840
 Transform:
   m_ObjectHideFlags: 0
@@ -5355,10 +5453,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733802838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 959, y: 557.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1240273775}
+  - {fileID: 1413309525}
+  - {fileID: 1584211890}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6027,7 +6127,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2035378811}
         m_MethodName: BuyItem
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6291,7 +6391,7 @@ PrefabInstance:
     - target: {fileID: 2054762450303639593, guid: bef787f04681c2940bd6ebd940a02308,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2054762450303639593, guid: bef787f04681c2940bd6ebd940a02308,
         type: 3}

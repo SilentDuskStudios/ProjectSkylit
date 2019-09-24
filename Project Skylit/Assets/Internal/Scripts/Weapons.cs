@@ -3,8 +3,8 @@ using System.Linq;
 
 using UnityEngine;
 
-public class Weapons : MonoBehaviour
-{
+public class Weapons : MonoBehaviour { 
+
     #region " - - - - - - Fields - - - - - - "
 
     private List<Weapon> weaponList;

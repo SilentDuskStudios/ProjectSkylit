@@ -20,10 +20,14 @@ public class ShopPanel : MonoBehaviour {
         this.gameObject.SetActive(false);
     }
 
-    public void BuyItem(string itemName) {
+    public void BuyItem(int ID) {
 
-        Debug.Log("You have purchased: " + itemName);
+        Item item = GameManager.gameManager.itemManager.GetItem(ID);
+
+        Debug.Log("You have purchased: " + item.itemName);
         CanvasManager.canvasManager.DisableShopPanel();
+
+        GameManager.gameManager.airdropManager.SpawnAirdrop(item);
     }
 
     #endregion

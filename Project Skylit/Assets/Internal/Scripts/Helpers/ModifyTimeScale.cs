@@ -13,6 +13,9 @@ public class ModifyTimeScale : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Keypad4))
+            Time.timeScale = 0.5f;
+
         if (Input.GetKeyDown(KeyCode.Keypad1))
             Time.timeScale = 1f;
 
