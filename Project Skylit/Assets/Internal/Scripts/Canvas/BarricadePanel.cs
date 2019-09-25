@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BarricadePanel : MonoBehaviour {
 
@@ -8,6 +9,9 @@ public class BarricadePanel : MonoBehaviour {
     [SerializeField]
     private Slider[] barricadeHealthBarSliders;
 
+    [SerializeField]
+    private TMP_Text healthBarPercentageText;
+
     #endregion
 
     #region " - - - - - - Methods - - - - - - "
@@ -15,6 +19,10 @@ public class BarricadePanel : MonoBehaviour {
     public void UpdateBarricadeHealthBar(int barricadeID, int currentHealth, int maxHealth) {
 
         barricadeHealthBarSliders[barricadeID].value = (float)currentHealth / (float)maxHealth;
+
+
+        //float currentPercentage = (float)currentHealth / (float)maxHealth;
+        //healthBarPercentageText.text = currentPercentage.ToString() + "%";
     }
 
     public void EnableBarricadePanel() {
