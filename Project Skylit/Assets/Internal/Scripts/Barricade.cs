@@ -109,8 +109,8 @@ public class Barricade : MonoBehaviour
     {
         //This could be dangerous because the beast could be chasing the survivor but is still in the barricade 
         //box collider even after it is destroyed.
-        if(other.gameObject.tag == "Beast")
-        {
+        if(other.gameObject.tag == "Beast") 
+            {
             Beast beast = other.gameObject.GetComponent<Beast>();
             Transform target = beast.gameObject.GetComponent<BeastNavigator>().target;
 
