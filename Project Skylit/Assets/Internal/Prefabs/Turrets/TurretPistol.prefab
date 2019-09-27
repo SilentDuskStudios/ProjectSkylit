@@ -159,7 +159,7 @@ MonoBehaviour:
   currentClip: 300
   maxCurrentClip: 300
   rotatableHead: {fileID: 1090595633192436870}
-  rotationSpeed: 1
+  rotationSpeed: 5
   layerMask:
     serializedVersion: 2
     m_Bits: 0

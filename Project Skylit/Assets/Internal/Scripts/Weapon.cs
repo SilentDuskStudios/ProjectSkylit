@@ -60,8 +60,7 @@ public class Weapon : Item {
 
     private void Update() {
 
-        if (hasShot) 
-            fireRateTimer += Time.deltaTime;
+        fireRateTimer += Time.deltaTime;
 
     }
 
@@ -97,13 +96,12 @@ public class Weapon : Item {
         if (reloading)
             return;
 
-        hasShot = true;
-
+        //TODO: change to HasAmmo()
         if ((currentClip > 0) && (fireRateTimer >= fireRate)) {
 
+            //Change this to Raycast() similar to Turrets implementation.
             Shoot();
             fireRateTimer = 0f;
-            hasShot = false;
 
         }
         else {

@@ -82,7 +82,6 @@ public class Weapons : MonoBehaviour {
             activeWeapon.image);
     }
 
-    
     public void AimDownSight(bool flag) {
 
         //flag parameter determines whether the survivor is aiming down the sight or not.
