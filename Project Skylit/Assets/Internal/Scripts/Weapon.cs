@@ -45,6 +45,11 @@ public class Weapon : Item {
     [SerializeField]
     private float reloadTime;
 
+    [SerializeField]
+    private AudioClip bulletFireSFX;
+
+    private AudioSource audioSource;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -56,6 +61,8 @@ public class Weapon : Item {
 
         hasShot = false;
         fireRateTimer = fireRate;
+
+        audioSource = this.gameObject.GetComponent<AudioSource>();
     }
 
     private void Update() {
@@ -81,6 +88,9 @@ public class Weapon : Item {
             }
         }
         Debug.DrawRay(survivorCamera.transform.position, survivorCamera.transform.forward * range, Color.red, 1f);
+
+        audioSource.PlayOneShot(bulletFireSFX);
+
 
         currentClip--;
 
