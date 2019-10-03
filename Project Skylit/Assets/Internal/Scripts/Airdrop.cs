@@ -17,7 +17,14 @@ public class Airdrop : MonoBehaviour {
     [SerializeField]
     private LayerMask layerMask;
 
+    //TODO: This is not being initialised...
     public Item item;
+
+    public GameObject itemPlaceholder;
+
+    public GameObject itemGameObject;
+
+    public Interaction interaction;
 
     #endregion
 

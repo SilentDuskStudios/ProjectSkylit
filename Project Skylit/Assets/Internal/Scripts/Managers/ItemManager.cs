@@ -17,6 +17,13 @@ public class ItemManager : MonoBehaviour {
         return itemDatabase.Find(x => x.ID == ID);
     }
 
+    public GameObject SpawnItem(int ID, Transform location) {
+
+        GameObject spawnedItem = Instantiate(itemDatabase[ID].gameObject, location.position, location.rotation);
+
+        return spawnedItem;
+    }
+
     #endregion
 
 }

@@ -181,7 +181,7 @@ MonoBehaviour:
   movementSpeed: 4
   beastHealthBar: {fileID: 5816986801022045155}
   beastType: 0
-  currencyValue: 2
+  currencyValue: 30
 --- !u!54 &4802667854269043723
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -209,6 +209,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BeastHealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 468322061716422375, guid: 5424bd67cffac76449605bae81fa9f5f,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468322061716422375, guid: 5424bd67cffac76449605bae81fa9f5f,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280020027485782775, guid: 5424bd67cffac76449605bae81fa9f5f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280020027485782775, guid: 5424bd67cffac76449605bae81fa9f5f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852197788972969845, guid: 5424bd67cffac76449605bae81fa9f5f,
         type: 3}
@@ -319,26 +339,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.010000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280020027485782775, guid: 5424bd67cffac76449605bae81fa9f5f,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280020027485782775, guid: 5424bd67cffac76449605bae81fa9f5f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 468322061716422375, guid: 5424bd67cffac76449605bae81fa9f5f,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 468322061716422375, guid: 5424bd67cffac76449605bae81fa9f5f,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5424bd67cffac76449605bae81fa9f5f, type: 3}

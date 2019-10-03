@@ -8,6 +8,7 @@ public class SurvivorController : MonoBehaviour {
 
     public InteractionController interactionController;
 
+    public InventoryController inventoryController;
 
     #endregion
 
@@ -17,12 +18,14 @@ public class SurvivorController : MonoBehaviour {
 
         weaponController.enabled = true;
         interactionController.enabled = true;
+        inventoryController.enabled = true;
     }
 
     public void DisableControllers() {
 
         weaponController.enabled = false;
         interactionController.enabled = false;
+        inventoryController.enabled = false;
     }
 
     #endregion

@@ -3,5 +3,6 @@
     None,
     Shop,
     RepairBarricade,
-    Airdrop
+    Airdrop,
+    Item
 }

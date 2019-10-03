@@ -21,9 +21,6 @@ public class Weapon : Item {
     Ray rayBulletStart;
 
     [SerializeField]
-    private Camera survivorCamera;
-
-    [SerializeField]
     private LayerMask layerMask;
 
     [SerializeField]
@@ -50,6 +47,8 @@ public class Weapon : Item {
 
     private AudioSource audioSource;
 
+    private Weapons weapons;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -61,6 +60,9 @@ public class Weapon : Item {
 
         hasShot = false;
         fireRateTimer = fireRate;
+
+        weapons = this.gameObject.transform.parent.GetComponent<Weapons>();
+
 
         audioSource = this.gameObject.GetComponent<AudioSource>();
     }
@@ -74,7 +76,7 @@ public class Weapon : Item {
     private void Shoot() {
 
         //TODO: rename the ray?
-        rayBulletStart = new Ray(survivorCamera.transform.position, survivorCamera.transform.forward * range);
+        rayBulletStart = new Ray(weapons.survivorCamera.transform.position, weapons.survivorCamera.transform.forward * range);
 
         if (Physics.Raycast(rayBulletStart, out RaycastHit hit, range, layerMask)) {
 
@@ -87,7 +89,7 @@ public class Weapon : Item {
 
             }
         }
-        Debug.DrawRay(survivorCamera.transform.position, survivorCamera.transform.forward * range, Color.red, 1f);
+        Debug.DrawRay(weapons.survivorCamera.transform.position, weapons.survivorCamera.transform.forward * range, Color.red, 1f);
 
         audioSource.PlayOneShot(bulletFireSFX);
 
@@ -106,8 +108,7 @@ public class Weapon : Item {
         if (reloading)
             return;
 
-        //TODO: change to HasAmmo()
-        if ((currentClip > 0) && (fireRateTimer >= fireRate)) {
+        if ((HasAmmo()) && (fireRateTimer >= fireRate)) {
 
             //Change this to Raycast() similar to Turrets implementation.
             Shoot();
@@ -159,6 +160,11 @@ public class Weapon : Item {
             return true;
         else
             return false;
+    }
+
+    private bool HasAmmo() {
+
+        return currentClip > 0;
     }
 
     #endregion //Methods

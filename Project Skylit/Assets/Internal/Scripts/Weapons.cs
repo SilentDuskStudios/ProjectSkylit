@@ -7,20 +7,21 @@ public class Weapons : MonoBehaviour {
 
     #region " - - - - - - Fields - - - - - - "
 
-    private List<Weapon> weaponList;
+    public List<Weapon> weaponList;
     private int amountOfWeapons;
 
     public Weapon activeWeapon;
 
     CanvasManager canvasManager;
 
-    [SerializeField]
-    private Camera camera;
+    public Camera survivorCamera;
 
     [SerializeField]
     private FirstPersonAIO firstPersonAIO;
 
-    #endregion //Fields
+
+
+    #endregion
 
     #region " - - - - - - Methods - - - - - - "
 
@@ -86,17 +87,32 @@ public class Weapons : MonoBehaviour {
 
         //flag parameter determines whether the survivor is aiming down the sight or not.
         if (flag) {
-            camera.fieldOfView = 50f;
+            survivorCamera.fieldOfView = 50f;
             firstPersonAIO.mouseSensitivity = 1.5f;
-            this.gameObject.transform.localPosition = new Vector3(0, -0.5f, 1);
+            this.gameObject.transform.localPosition = new Vector3(0f, 0f, 0.6f);
         }
 
         else {
-            camera.fieldOfView = 60f;
+            survivorCamera.fieldOfView = 60f;
             firstPersonAIO.mouseSensitivity = 4f;
-            this.gameObject.transform.localPosition = new Vector3(-1, -0.8f, 2.2f);
+            this.gameObject.transform.localPosition = new Vector3(-1.5f, -0.4f, 1.7f);
         }
     }
 
-    #endregion //Methods
+    public void AddWeapon(GameObject weapon) {
+
+        activeWeapon.gameObject.SetActive(false);
+
+        amountOfWeapons++;
+        weapon.transform.SetParent(this.gameObject.transform);
+        weaponList.Add(weapon.GetComponent<Weapon>());
+
+        activeWeapon = weaponList.Last();
+
+
+        CanvasManager.canvasManager.UpdateWeaponPanel(activeWeapon.name, activeWeapon.currentClip, activeWeapon.currentReserveClip,
+            activeWeapon.image);
+    }
+
+    #endregion
 }
