@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 8779142580892106469}
   - component: {fileID: 2982572451890395991}
   - component: {fileID: 738514015898677395}
+  - component: {fileID: 6597766898185860306}
   m_Layer: 0
   m_Name: Airdrop
   m_TagString: Untagged
@@ -320,6 +321,20 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &6597766898185860306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7613287730537476026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32718bfc9acf9ee41a1c2e0d4d50c11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfDestructTimer: 45
+  descendSpeed: 0.5
 --- !u!1001 &7264592435353235564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -327,16 +342,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1027296506391556310}
     m_Modifications:
-    - target: {fileID: 5931499253322476273, guid: 859a3b1b6dd26854688e2ee3151a288e,
-        type: 3}
-      propertyPath: m_Name
-      value: Interaction
-      objectReference: {fileID: 0}
-    - target: {fileID: 1518983873263533557, guid: 859a3b1b6dd26854688e2ee3151a288e,
-        type: 3}
-      propertyPath: interactionType
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5931499253322476270, guid: 859a3b1b6dd26854688e2ee3151a288e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -406,6 +411,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.26954335
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931499253322476273, guid: 859a3b1b6dd26854688e2ee3151a288e,
+        type: 3}
+      propertyPath: m_Name
+      value: Interaction
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518983873263533557, guid: 859a3b1b6dd26854688e2ee3151a288e,
+        type: 3}
+      propertyPath: interactionType
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3514995637685981049, guid: 859a3b1b6dd26854688e2ee3151a288e,
         type: 3}
