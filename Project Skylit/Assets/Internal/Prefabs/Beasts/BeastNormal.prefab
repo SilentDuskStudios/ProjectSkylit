@@ -181,7 +181,7 @@ MonoBehaviour:
   movementSpeed: 4
   beastHealthBar: {fileID: 5816986801022045155}
   beastType: 0
-  currencyValue: 30
+  currencyValue: 2
 --- !u!54 &4802667854269043723
 Rigidbody:
   m_ObjectHideFlags: 0
