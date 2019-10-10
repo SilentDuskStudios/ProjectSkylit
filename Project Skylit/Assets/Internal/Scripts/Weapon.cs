@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.HDPipeline;
 
@@ -7,7 +8,10 @@ public class Weapon : Item {
     #region " - - - - - - Fields - - - - - - "
 
     [SerializeField]
-    private int damage;
+    private int totalDamage;
+
+    [SerializeField]
+    private int baseDamage;
 
     public int maxCurrentClip, maxReserveClip, currentClip, currentReserveClip;
 
@@ -49,7 +53,7 @@ public class Weapon : Item {
 
     private Weapons weapons;
 
-    #endregion //Fields
+    #endregion
 
     #region " - - - - - - Methods - - - - - - "
 
@@ -85,7 +89,10 @@ public class Weapon : Item {
             bullelHole.transform.SetParent(hit.transform);
             if (hit.transform.gameObject.GetComponent<Beast>()) {
 
-                hit.transform.gameObject.GetComponent<Beast>().TakeDamage(damage);
+                //TODO: Add damage skill modifier.
+                //TODO: To do this, instead of checking reference multiple times, each time the survivor increases a skill, have the WeaponController
+                //      update all the weapons damage instead.
+                hit.transform.gameObject.GetComponent<Beast>().TakeDamage(totalDamage);
 
             }
         }
@@ -167,5 +174,11 @@ public class Weapon : Item {
         return currentClip > 0;
     }
 
-    #endregion //Methods
+    //TODO: Include damage modifiers from other things such as attachments?
+    public void UpdateDamage(float damageModifier) {
+
+        totalDamage = (int)Math.Ceiling(((float)baseDamage * damageModifier));
+    }
+
+    #endregion
 }

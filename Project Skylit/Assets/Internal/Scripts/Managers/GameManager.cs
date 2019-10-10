@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour {
 
     public CurrencyManager currencyManager;
 
+    public SkillManager skillManager;
+
+    public SurvivorManager survivorManager;
+
     #endregion
 
     #region " - - - - - - Methods - - - - - - "

@@ -83,7 +83,8 @@ MonoBehaviour:
   price: 15
   weight: 3
   interaction: {fileID: 6043064061450695344}
-  damage: 15
+  totalDamage: 15
+  baseDamage: 15
   maxCurrentClip: 9
   maxReserveClip: 81
   currentClip: 9
@@ -307,11 +308,6 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5931499251710641082, guid: 859a3b1b6dd26854688e2ee3151a288e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5931499251710641081, guid: 859a3b1b6dd26854688e2ee3151a288e,
         type: 3}
       propertyPath: m_Center.x
@@ -341,6 +337,11 @@ PrefabInstance:
         type: 3}
       propertyPath: interactionType
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931499251710641082, guid: 859a3b1b6dd26854688e2ee3151a288e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 859a3b1b6dd26854688e2ee3151a288e, type: 3}

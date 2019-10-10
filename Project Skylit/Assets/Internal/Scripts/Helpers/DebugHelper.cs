@@ -23,6 +23,10 @@ public class DebugHelper : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Keypad4))
             GameManager.gameManager.currencyManager.Add(10);
+
+        if (Input.GetKeyDown(KeyCode.Keypad5))
+            GameManager.gameManager.skillManager.AddSkillpoints();
+        
     }
 
     #endregion

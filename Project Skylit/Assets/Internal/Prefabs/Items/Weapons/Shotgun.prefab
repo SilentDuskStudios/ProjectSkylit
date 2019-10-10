@@ -83,7 +83,8 @@ MonoBehaviour:
   price: 35
   weight: 5
   interaction: {fileID: 5228705289209647917}
-  damage: 35
+  totalDamage: 30
+  baseDamage: 30
   maxCurrentClip: 8
   maxReserveClip: 72
   currentClip: 8
@@ -232,6 +233,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8383297754775508515}
     m_Modifications:
+    - target: {fileID: 100000, guid: 528e83ecdba72724fb701445cdfbc7b4, type: 3}
+      propertyPath: m_Name
+      value: Shotgun
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 528e83ecdba72724fb701445cdfbc7b4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -287,10 +292,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 528e83ecdba72724fb701445cdfbc7b4, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 528e83ecdba72724fb701445cdfbc7b4, type: 3}
-      propertyPath: m_Name
-      value: Shotgun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 528e83ecdba72724fb701445cdfbc7b4, type: 3}

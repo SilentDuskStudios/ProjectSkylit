@@ -19,7 +19,8 @@ public class Weapons : MonoBehaviour {
     [SerializeField]
     private FirstPersonAIO firstPersonAIO;
 
-
+    [SerializeField]
+    private Skills skills;
 
     #endregion
 
@@ -109,9 +110,19 @@ public class Weapons : MonoBehaviour {
 
         activeWeapon = weaponList.Last();
 
+        int damageSkill = this.skills.GetDamageLevel();
+        float damageModifier = GameManager.gameManager.skillManager.GetDamageModifier(damageSkill);
+        activeWeapon.UpdateDamage(damageModifier);
 
         CanvasManager.canvasManager.UpdateWeaponPanel(activeWeapon.name, activeWeapon.currentClip, activeWeapon.currentReserveClip,
             activeWeapon.image);
+    }
+
+    public void UpdateAllWeaponsDamage(float damageModifier) {
+
+        foreach (Weapon weapon in weaponList) {
+            weapon.UpdateDamage(damageModifier);
+        }
     }
 
     #endregion

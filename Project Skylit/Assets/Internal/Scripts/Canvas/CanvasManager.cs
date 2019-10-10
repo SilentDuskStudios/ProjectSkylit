@@ -28,6 +28,9 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private ReticlePanel reticlePanel;
 
+    [SerializeField]
+    private SkillPanel skillPanel;
+
     #endregion //Fields
 
     #region " - - - - - - Methods - - - - - - "
@@ -77,6 +80,11 @@ public class CanvasManager : MonoBehaviour
         interactionPanel.UpdateInteractionPanel(interactionType);
     }
 
+    public void UpdateSkillPanel(int skillpoints) {
+
+        skillPanel.UpdateSkillPanel(skillpoints);
+    }
+
     public void DisableInteractionPanel() {
 
         interactionPanel.DisableInteractionPanel();
@@ -94,6 +102,22 @@ public class CanvasManager : MonoBehaviour
 
         EnableMainPanels();
         shopPanel.DisableShopPanel();
+        GameManager.gameManager.inputManager.DisableCursor();
+        GameManager.gameManager.inputManager.EnableSurvivorControls();
+    }
+
+    public void EnableSkillPanel(int skillpoints) {
+
+        DisableMainPanels();
+        skillPanel.EnableSkillPanel(skillpoints);
+        GameManager.gameManager.inputManager.EnableCursor();
+        GameManager.gameManager.inputManager.DisableSurvivorControls();
+    }
+
+    public void DisableSkillPanel() {
+
+        EnableMainPanels();
+        skillPanel.DisableSkillPanel();
         GameManager.gameManager.inputManager.DisableCursor();
         GameManager.gameManager.inputManager.EnableSurvivorControls();
     }

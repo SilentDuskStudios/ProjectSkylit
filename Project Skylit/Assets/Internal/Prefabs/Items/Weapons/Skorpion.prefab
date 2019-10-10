@@ -83,7 +83,8 @@ MonoBehaviour:
   price: 30
   weight: 4
   interaction: {fileID: 3901063238836961661}
-  damage: 8
+  totalDamage: 8
+  baseDamage: 8
   maxCurrentClip: 30
   maxReserveClip: 270
   currentClip: 30

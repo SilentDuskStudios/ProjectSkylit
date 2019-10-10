@@ -4,8 +4,7 @@ public class WeaponController : MonoBehaviour {
 
     #region " - - - - - - Fields - - - - - - "
 
-    [SerializeField]
-    private Weapons weapons;
+    public Weapons weapons;
 
     #endregion //Fields
 

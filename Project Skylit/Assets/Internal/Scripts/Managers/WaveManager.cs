@@ -69,6 +69,7 @@ public class WaveManager : MonoBehaviour {
         beastBossSpawnCount = 0;
 
         CanvasManager.canvasManager.UpdateWavePanel(waveNumber);
+        GameManager.gameManager.skillManager.AddSkillpoints();
     }
 
     public bool CanSpawnBeast() {
