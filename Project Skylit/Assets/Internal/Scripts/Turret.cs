@@ -89,7 +89,7 @@ public class Turret : MonoBehaviour {
             bulletHole.transform.SetParent(hit.transform);
 
             if (hit.transform.GetComponent<Beast>())
-                hit.transform.GetComponent<Beast>().TakeDamage(damage);
+                hit.transform.GetComponent<Beast>().TakeDamage(damage, hit.point);
         }
     }
 

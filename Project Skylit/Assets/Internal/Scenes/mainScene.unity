@@ -3099,6 +3099,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skills
       objectReference: {fileID: 0}
+    - target: {fileID: 5906109318820489091, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906109318820489091, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 16183
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902594782614431190, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902594782614431190, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902594782614431190, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: m_Name
+      value: ForegroundCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647926684217059417, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647926684217059417, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 16384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647926684217059417, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492329829824706538, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: clearColorMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492329829824706538, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: volumeLayerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492329829824706538, guid: 38c63cd2b75833549ba92abfd7cfb13f,
+        type: 3}
+      propertyPath: clearDepth
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38c63cd2b75833549ba92abfd7cfb13f, type: 3}
 --- !u!1 &544788865

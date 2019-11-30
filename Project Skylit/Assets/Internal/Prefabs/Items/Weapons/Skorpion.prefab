@@ -95,7 +95,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 311
   decal: {fileID: 4994386967894021706, guid: d9e0bfc30f92b6f4cb340fa338d41fd1, type: 3}
-  fireRate: 0.025
+  fireRate: 0.04
   fireType: 1
   image: {fileID: 21300000, guid: e784bc08a17d87a439593825188650a3, type: 3}
   reloadTime: 3

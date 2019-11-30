@@ -92,7 +92,7 @@ public class Weapon : Item {
                 //TODO: Add damage skill modifier.
                 //TODO: To do this, instead of checking reference multiple times, each time the survivor increases a skill, have the WeaponController
                 //      update all the weapons damage instead.
-                hit.transform.gameObject.GetComponent<Beast>().TakeDamage(totalDamage);
+                hit.transform.gameObject.GetComponent<Beast>().TakeDamage(totalDamage, hit.point);
 
             }
         }

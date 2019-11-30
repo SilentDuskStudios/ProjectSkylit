@@ -114,6 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a70097ffd07ef408d6c52d2795f075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePopup: {fileID: 8359245812391603528, guid: 9c350dd89c921354e963f7fdf1bc0620,
+    type: 3}
   canAttack: 0
   maxHealth: 25
   damage: 1
@@ -209,6 +211,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BeastHealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 468322061716422375, guid: 5424bd67cffac76449605bae81fa9f5f,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468322061716422375, guid: 5424bd67cffac76449605bae81fa9f5f,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280020027485782775, guid: 5424bd67cffac76449605bae81fa9f5f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280020027485782775, guid: 5424bd67cffac76449605bae81fa9f5f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852197788972969845, guid: 5424bd67cffac76449605bae81fa9f5f,
         type: 3}
@@ -314,26 +336,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280020027485782775, guid: 5424bd67cffac76449605bae81fa9f5f,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280020027485782775, guid: 5424bd67cffac76449605bae81fa9f5f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 468322061716422375, guid: 5424bd67cffac76449605bae81fa9f5f,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 468322061716422375, guid: 5424bd67cffac76449605bae81fa9f5f,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5424bd67cffac76449605bae81fa9f5f, type: 3}

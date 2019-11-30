@@ -5,6 +5,9 @@ public class Beast : MonoBehaviour {
 
     #region " - - - - - - Fields - - - - - - "
 
+    [SerializeField]
+    private DamagePopup damagePopup;
+
     public bool canAttack;
 
     private float attackCooldown;
@@ -63,9 +66,15 @@ public class Beast : MonoBehaviour {
 
     }
 
-    public void TakeDamage(int _damage) {
+    public void TakeDamage(int _damage, Vector3 damagePoint) {
 
         currentHealth -= _damage;
+
+        //Instantiate DamagePopup GO:
+        DamagePopup damagePopupGO = Instantiate(damagePopup, damagePoint, transform.rotation);
+        damagePopupGO.AssignDamage(_damage);
+
+
         if (currentHealth < 1)
             Die();
 
